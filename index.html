@@ -1,78 +1,143 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Phanish Chava, Ph.D. — CTO at AdMOS. Semiconductor device modeling, cryogenic CMOS, low-frequency noise, electrical characterization and 2D materials.">
-<title>Phanish Chava, Ph.D. | Semiconductor Device Modeling & Characterization</title>
-<style>
-:root{--bg:#08101b;--panel:#0e1927;--panel2:#111f30;--text:#edf4fb;--muted:#9db0c3;--line:#203247;--cyan:#58d7d0;--blue:#7aa7ff;--max:1180px}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}a{color:inherit;text-decoration:none}.wrap{width:min(calc(100% - 38px),var(--max));margin:auto}
-nav{position:sticky;top:0;z-index:20;background:rgba(8,16,27,.86);backdrop-filter:blur(15px);border-bottom:1px solid rgba(255,255,255,.07)}.nav{height:70px;display:flex;align-items:center;justify-content:space-between}.logo{font-weight:850;letter-spacing:-.02em}.logo b{color:var(--cyan)}.links{display:flex;gap:24px;color:var(--muted);font-size:14px}.links a:hover{color:white}
-.hero{min-height:84vh;display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:65px;padding:85px 0 60px}.eyebrow{color:var(--cyan);font-weight:750;letter-spacing:.04em;text-transform:uppercase;font-size:13px}.hero h1{font-size:clamp(3.5rem,8vw,6.8rem);line-height:.91;letter-spacing:-.065em;margin:16px 0 25px}.hero h1 span{background:linear-gradient(100deg,#fff 5%,var(--blue) 55%,var(--cyan));-webkit-background-clip:text;color:transparent}.lead{font-size:19px;color:var(--muted);max-width:760px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}.btn{padding:12px 17px;border:1px solid var(--line);border-radius:12px;font-weight:700;font-size:14px;background:#0c1725}.btn.primary{background:var(--cyan);color:#06131a;border-color:var(--cyan)}
-.visual{aspect-ratio:1/1;border:1px solid var(--line);border-radius:50%;position:relative;background:radial-gradient(circle at 38% 35%,rgba(88,215,208,.18),transparent 32%),radial-gradient(circle at 65% 68%,rgba(122,167,255,.15),transparent 32%),#0b1623;box-shadow:0 30px 90px #0008}.visual:before,.visual:after{content:"";position:absolute;border:1px solid #29425b;border-radius:50%;inset:13%}.visual:after{inset:29%}.chip{position:absolute;width:28%;height:28%;left:36%;top:36%;border-radius:14px;transform:rotate(10deg);background:linear-gradient(135deg,var(--blue),var(--cyan));box-shadow:0 0 50px #58d7d044}.chip:after{content:"DEVICE";position:absolute;inset:13%;display:grid;place-items:center;border:1px solid #07121a77;border-radius:8px;color:#07121a;font-weight:900;font-size:11px;letter-spacing:.12em}
-section{padding:92px 0}.head{display:grid;grid-template-columns:.7fr 1.3fr;gap:40px;margin-bottom:36px}.head h2{font-size:clamp(2rem,4vw,3.3rem);letter-spacing:-.045em;margin:0}.head p{color:var(--muted);margin:8px 0 0;max-width:700px}.grid{display:grid;gap:18px}.three{grid-template-columns:repeat(3,1fr)}.four{grid-template-columns:repeat(4,1fr)}.card{background:linear-gradient(145deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:20px;padding:25px}.card h3{margin:0 0 9px;font-size:19px}.card p{color:var(--muted);margin:0}.num{font-size:13px;color:var(--cyan);font-weight:800;margin-bottom:30px}
-.feature{grid-column:span 2;padding:34px}.feature h3{font-size:30px;letter-spacing:-.03em}.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px}.tag{font-size:12px;padding:6px 9px;border-radius:999px;border:1px solid var(--line);color:#c4d2df}
-.timeline{display:grid;gap:14px}.role{display:grid;grid-template-columns:170px 1fr;gap:28px}.role .date{color:var(--cyan);font-weight:750;font-size:14px}.role h3{margin:0 0 3px}.role .org{color:#c7d4e1;margin-bottom:9px}.role p{color:var(--muted);margin:0}
-.pub{display:flex;flex-direction:column;min-height:270px}.pub .year{font-size:12px;color:var(--cyan);font-weight:800}.pub h3{margin:12px 0;font-size:18px;line-height:1.35}.pub .journal{color:var(--muted);font-size:14px}.pub a{margin-top:auto;padding-top:20px;color:var(--cyan);font-weight:700;font-size:14px}
-.award strong{display:block;margin-bottom:6px}.award span{color:var(--cyan);font-size:13px;font-weight:800}.contact{text-align:center;padding:55px}.contact h2{font-size:clamp(2.4rem,6vw,4.8rem);letter-spacing:-.055em;line-height:1;margin:0 0 20px}.contact p{max-width:690px;margin:auto;color:var(--muted)}footer{padding:30px 0 50px;color:var(--muted);font-size:13px;text-align:center}
-@media(max-width:850px){.links{display:none}.hero{grid-template-columns:1fr;min-height:auto}.visual{max-width:440px;margin:auto;width:100%}.head{grid-template-columns:1fr}.three,.four{grid-template-columns:1fr 1fr}.feature{grid-column:span 2}.role{grid-template-columns:1fr;gap:5px}}
-@media(max-width:560px){.three,.four{grid-template-columns:1fr}.feature{grid-column:auto}.hero h1{font-size:3.5rem}.contact{padding:35px 20px}section{padding:70px 0}}
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#08111d" />
+  <meta name="description" content="Portfolio of Dr. Phanish Chava — researcher, electrical engineer and former software developer." />
+  <title>Phanish Chava, Ph.D. — Semiconductor Research & Technology</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
 </head>
 <body>
-<nav><div class="wrap nav"><a class="logo" href="#top">PHANISH <b>CHAVA</b></a><div class="links"><a href="#expertise">Expertise</a><a href="#experience">Experience</a><a href="#research">Research</a><a href="#recognition">Recognition</a><a href="#contact">Contact</a></div></div></nav>
-<main id="top">
-<div class="wrap hero">
-<div><div class="eyebrow">Semiconductor Technologist · Researcher · Electrical Engineer</div>
-<h1>Phanish<br><span>Chava, Ph.D.</span></h1>
-<p class="lead">CTO at AdMOS, working at the intersection of semiconductor device physics, compact modeling and precision characterization. My research spans cryogenic FD-SOI CMOS, low-frequency noise, emerging 2D devices and technology that connects measurement to predictive models.</p>
-<div class="actions"><a class="btn primary" href="#research">Explore research</a><a class="btn" href="Phanish_Chava_CV.pdf">Download CV</a><a class="btn" href="https://de.linkedin.com/in/phanishchava">LinkedIn</a><a class="btn" href="https://orcid.org/0000-0001-9938-2835">ORCID</a></div>
-</div>
-<div class="visual"><div class="chip"></div></div>
-</div>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
 
-<section id="expertise"><div class="wrap"><div class="head"><h2>Engineering devices from measurement to model.</h2><p>My work combines hands-on semiconductor characterization, cleanroom fabrication, device physics and compact modeling — with experience spanning advanced CMOS and novel low-dimensional materials.</p></div>
-<div class="grid four">
-<div class="card"><div class="num">01</div><h3>Device Modeling</h3><p>Compact modeling of advanced transistor technologies, including cryogenic model libraries and EDA-oriented device representation.</p></div>
-<div class="card"><div class="num">02</div><h3>Cryogenic CMOS</h3><p>Electrical characterization and modeling of FD-SOI transistors from room temperature into deep cryogenic operation.</p></div>
-<div class="card"><div class="num">03</div><h3>Noise & Characterization</h3><p>I-V, C-V and low-frequency noise characterization, cryogenic Hall measurements and semiconductor measurement workflows.</p></div>
-<div class="card"><div class="num">04</div><h3>Emerging Devices</h3><p>2D heterojunctions, tunneling transistors, photodiodes, sensors and reconfigurable device concepts.</p></div>
-</div></div></section>
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="Back to top">
+      <span class="brand-mark">PC</span>
+      <span class="brand-copy">Phanish Chava <small>Ph.D.</small></span>
+    </a>
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      <a href="#about">About</a><a href="#expertise">Expertise</a><a href="#experience">Experience</a><a href="#publications">Publications</a><a href="#contact">Contact</a>
+    </nav>
+    <button class="theme-toggle" type="button" aria-label="Toggle theme"><span aria-hidden="true">◐</span></button>
+  </header>
 
-<section id="experience"><div class="wrap"><div class="head"><h2>Experience</h2><p>A path from software engineering to nanofabrication, device research, cryogenic electronics and semiconductor technology leadership.</p></div>
-<div class="timeline">
-<div class="card role"><div class="date">2026 — PRESENT</div><div><h3>Chief Technology Officer</h3><div class="org">AdMOS GmbH Advanced Modeling Solutions · Germany</div><p>Leading technology development around transistor modeling and low-frequency noise measurement systems for semiconductor characterization.</p></div></div>
-<div class="card role"><div class="date">2023 — 2026</div><div><h3>Postdoctoral Researcher</h3><div class="org">Forschungszentrum Jülich · PGI-4</div><p>Cryogenic characterization and compact modeling of advanced CMOS nodes; development of a cryogenic PDK for FD-SOI transistors; post-silicon cryogenic verification of mixed-signal ASICs.</p></div></div>
-<div class="card role"><div class="date">2018 — 2023</div><div><h3>Ph.D. Researcher</h3><div class="org">Helmholtz-Zentrum Dresden-Rossendorf · TU Dresden</div><p>Electrical transport in 2D p-n heterojunctions, tunneling transistors, photodiodes, temperature sensors and black-phosphorus-based gas sensing.</p></div></div>
-<div class="card role"><div class="date">2017</div><div><h3>Research Intern</h3><div class="org">imec · Leuven, Belgium</div><p>Fabrication and characterization of 2D-material transistors and development of virtual-source compact models.</p></div></div>
-<div class="card role"><div class="date">2014 — 2015</div><div><h3>Associate Software Developer</h3><div class="org">Accenture · India</div><p>Designed mobile and web banking applications and proposed automated testing approaches for robust application performance.</p></div></div>
-</div></div></section>
+  <main>
+    <section class="hero section-shell">
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span class="status-dot"></span> Researcher - Electrical Engineer - Former Software Developer</p>
+        <h1>Engineering devices at the <span class="gradient-text">edge of physics.</span></h1>
+        <p class="hero-lede">Hello, I’m <strong>Phanish Chava</strong>, an electrical engineer with a passion for micro- and nano-electronic semiconductor technologies.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#publications">Explore publications <span>↘</span></a>
+          <a class="button ghost" href="mailto:chavaphanish@gmail.com">Start a conversation</a>
+        </div>
+        <div class="hero-meta" aria-label="Professional profiles">
+          <a href="https://www.linkedin.com/in/phanishchava" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+          <a href="https://orcid.org/0000-0001-9938-2835" target="_blank" rel="noreferrer">ORCID ↗</a>
+          <a href="https://scholar.google.com/scholar?q=%22Phanish+Chava%22" target="_blank" rel="noreferrer">Google Scholar ↗</a>
+          <a href="https://www.researchgate.net/profile/Phanish-Chava" target="_blank" rel="noreferrer">ResearchGate ↗</a>
+        </div>
+      </div>
 
-<section id="research"><div class="wrap"><div class="head"><h2>Selected research</h2><p>Research contributions across cryogenic transistor modeling, 2D-material heterostructures and emerging semiconductor devices. For a complete record, see ORCID and Google Scholar.</p></div>
-<div class="grid three">
-<article class="card feature pub"><div class="year">IEEE TRANSACTIONS ON ELECTRON DEVICES · 2026</div><h3>Evaluation of Cryogenic Model Libraries for FDSOI CMOS Transistors</h3><div class="journal">Cryogenic simulation libraries validated from 8 K to room temperature at device and circuit level.</div><div class="tags"><span class="tag">FD-SOI</span><span class="tag">Cryogenic CMOS</span><span class="tag">Compact Modeling</span></div><a href="https://doi.org/10.1109/TED.2026.3675187">View publication →</a></article>
-<article class="card pub"><div class="year">SCIENTIFIC REPORTS · 2024</div><h3>Electrical characterization of multi-gated WSe₂/MoS₂ van der Waals heterojunctions</h3><div class="journal">Device fabrication, measurement and transport analysis of vertically stacked 2D heterojunctions.</div><a href="https://doi.org/10.1038/s41598-024-56455-x">View publication →</a></article>
-<article class="card pub"><div class="year">APPLIED PHYSICS REVIEWS · 2023</div><h3>Band-to-band tunneling switches based on two-dimensional van der Waals heterojunctions</h3><div class="journal">Review and perspective on 2D heterojunctions for tunnel switches and low-power electronics.</div><a href="https://doi.org/10.1063/5.0130930">View publication →</a></article>
-<article class="card pub"><div class="year">MICRO AND NANO ENGINEERING · 2024</div><h3>2D BDiode — a switchable bidirectional diode for analog electronic circuits</h3><div class="journal">A switchable diode concept fabricated entirely from two-dimensional materials.</div><a href="https://doi.org/10.1016/j.mne.2024.100246">Search publication →</a></article>
-<article class="card pub"><div class="year">IEEE J-EDS · 2023</div><h3>Temperature sensor performance of a fully 2D WSe₂/MoS₂ heterojunction diode at cryogenic temperatures</h3><div class="journal">Electrical and temperature-sensing behavior of a 2D heterojunction device.</div><a href="https://scholar.google.com/scholar?q=Phanish+Chava+WSe2+MoS2+temperature+sensor">Google Scholar →</a></article>
-</div>
-<div class="actions" style="margin-top:22px"><a class="btn primary" href="https://scholar.google.com/scholar?q=%22Phanish+Chava%22">Google Scholar</a><a class="btn" href="https://orcid.org/0000-0001-9938-2835">ORCID record</a><a class="btn" href="https://www.researchgate.net/profile/Phanish-Chava">ResearchGate</a></div>
-</div></section>
+      <div class="hero-visual reveal" data-delay="120">
+        <div class="portrait-wrap">
+          <div class="portrait-halo"></div>
+          <img src="assets/profile.jpg" alt="Portrait of Phanish Chava" width="720" height="720" fetchpriority="high" />
+        </div>
+      </div>
+    </section>
 
-<section id="recognition"><div class="wrap"><div class="head"><h2>Recognition & education</h2><p>Academic training in nanoelectronics and electrical engineering, complemented by research awards and international experience.</p></div>
-<div class="grid three">
-<div class="card award"><span>2022</span><strong>HZDR Innovation Contest · 3rd Place</strong><p>Recognition for development of a gas sensor based on two-dimensional materials.</p></div>
-<div class="card award"><span>2018</span><strong>DAAD-STIBET Scholarship</strong><p>Awarded by the German Academic Exchange Service for highly committed international students.</p></div>
-<div class="card award"><span>2017</span><strong>CFAED-INSPIRE Grant</strong><p>Supported a research stay at imec in Leuven, Belgium.</p></div>
-<div class="card"><h3>Ph.D. · Electrical Engineering</h3><p>Technische Universität Dresden</p></div>
-<div class="card"><h3>M.Sc. · Nanoelectronic Systems</h3><p>Technische Universität Dresden · 2015–2018</p></div>
-<div class="card"><h3>B.Tech. · Electronics & Instrumentation</h3><p>Vellore Institute of Technology · 2010–2014</p></div>
-</div></div></section>
+    <section class="signal-strip" aria-label="Core focus areas">
+      <div class="marquee-track">
+        <span>CRYOGENIC CMOS</span><i>✦</i><span>COMPACT MODELING</span><i>✦</i><span>LOW-FREQUENCY NOISE</span><i>✦</i><span>FD-SOI</span><i>✦</i><span>2D MATERIALS</span><i>✦</i><span>DEVICE CHARACTERIZATION</span><i>✦</i><span>CRYOGENIC CMOS</span><i>✦</i><span>COMPACT MODELING</span><i>✦</i><span>LOW-FREQUENCY NOISE</span><i>✦</i><span>FD-SOI</span><i>✦</i><span>2D MATERIALS</span><i>✦</i><span>DEVICE CHARACTERIZATION</span>
+      </div>
+    </section>
 
-<section id="contact"><div class="wrap"><div class="card contact"><div class="eyebrow">CONNECT</div><h2>Semiconductors.<br>Models. Measurements.</h2><p>I’m interested in collaborations and conversations around semiconductor characterization, compact modeling, low-frequency noise, cryogenic electronics and emerging device technologies.</p>
-<div class="actions" style="justify-content:center"><a class="btn primary" href="mailto:chavaphanish@gmail.com">Email me</a><a class="btn" href="https://de.linkedin.com/in/phanishchava">LinkedIn</a><a class="btn" href="Phanish_Chava_CV.pdf">CV</a></div></div></div></section>
-</main>
-<footer><div class="wrap">© <span id="year"></span> Phanish Chava · Stuttgart Region, Germany · Built for GitHub Pages</div></footer>
-<script>document.getElementById("year").textContent=new Date().getFullYear()</script>
-</body></html>
+    <section id="about" class="section-shell split-section">
+      <div class="section-kicker reveal"><span>01</span> About</div>
+      <div class="about-grid">
+        <h2 class="reveal">From atomically thin devices to scalable cryogenic electronics.</h2>
+        <div class="about-copy reveal" data-delay="100">
+          <p>My work sits at the intersection of <strong>semiconductor device physics, measurement and modeling</strong>. I have built and characterized 2D-material devices, developed compact models for advanced transistors, and helped translate cryogenic device behavior into design-ready model libraries.</p>
+          <p>In 2026, I joined <strong>AdMOS GmbH Advanced Modeling Solutions</strong> as CTO, leading work on transistor models and low-frequency-noise measurement systems. Previously, I conducted postdoctoral research at Forschungszentrum Jülich focused on cryogenic characterization, FDSOI modeling and post-silicon verification for quantum-control electronics.</p>
+        </div>
+      </div>
+      <div class="stats-grid reveal">
+        <article><strong id="publicationCount">23</strong><span>publications & conference works listed</span></article>
+        <article><strong>10+</strong><span>years across research & software</span></article>
+      </div>
+    </section>
+
+    <section id="expertise" class="section-shell">
+      <div class="section-heading reveal"><div class="section-kicker"><span>02</span> Expertise</div><h2>What I work on</h2></div>
+      <div class="expertise-grid">
+        <article class="expertise-card reveal"><span class="card-index">01</span><h3>Cryogenic Electronics</h3><p>Electrical characterization and model validation of advanced CMOS nodes down to deep-cryogenic temperatures for quantum-control electronics.</p><div class="tags"><span>FDSOI</span><span>4 K</span><span>PDK</span><span>ASIC verification</span></div></article>
+        <article class="expertise-card reveal" data-delay="80"><span class="card-index">02</span><h3>Device Modeling</h3><p>Compact-model development, extraction, validation and EDA-compatible design libraries that translate measured device physics into circuit simulation.</p><div class="tags"><span>Compact models</span><span>Parameter extraction</span><span>EDA</span><span>Python</span></div></article>
+        <article class="expertise-card reveal" data-delay="160"><span class="card-index">03</span><h3>Semiconductor Characterization</h3><p>I-V, C-V and noise characterization, cryogenic Hall measurements, AFM, photoluminescence and Raman spectroscopy.</p><div class="tags"><span>I-V / C-V</span><span>Noise</span><span>Hall</span><span>AFM</span></div></article>
+        <article class="expertise-card reveal" data-delay="240"><span class="card-index">04</span><h3>Nanoelectronics & 2D Materials</h3><p>Fabrication and study of van der Waals heterojunctions, tunneling transistors, photodiodes, temperature sensors and black-phosphorus gas sensors.</p><div class="tags"><span>WSe₂/MoS₂</span><span>TFET</span><span>Photodiodes</span><span>Cleanroom</span></div></article>
+      </div>
+    </section>
+
+    <section id="experience" class="section-shell">
+      <div class="section-heading reveal"><div class="section-kicker"><span>03</span> Journey</div><h2>Experience & education</h2></div>
+      <div class="timeline">
+        <article class="timeline-item reveal"><div class="timeline-date">2026 — now</div><div><p class="timeline-type">Industry · Leadership</p><h3>CTO · AdMOS GmbH Advanced Modeling Solutions</h3><p>Leading the development of transistor models and low-frequency-noise measurement systems, bridging semiconductor measurement, model extraction and EDA workflows.</p></div></article>
+        <article class="timeline-item reveal"><div class="timeline-date">2023 — 2026</div><div><p class="timeline-type">Postdoctoral research</p><h3>Forschungszentrum Jülich · PGI-4</h3><p>Cryogenic characterization and compact modeling of advanced CMOS nodes, cryogenic PDK development for FDSOI transistors, and post-silicon verification of mixed-signal ASICs.</p></div></article>
+        <article class="timeline-item reveal"><div class="timeline-date">2018 — 2025</div><div><p class="timeline-type">Doctoral research</p><h3>TU Dresden · Helmholtz-Zentrum Dresden-Rossendorf</h3><p>Electrical transport in two-dimensional van der Waals heterojunctions, including tunneling transistors, photodiodes, temperature sensors and gas sensing.</p></div></article>
+        <article class="timeline-item reveal"><div class="timeline-date">2017</div><div><p class="timeline-type">Research internship</p><h3>imec · Leuven</h3><p>Fabrication and characterization of 2D-material transistors and development of virtual-source compact models.</p></div></article>
+        <article class="timeline-item reveal"><div class="timeline-date">2014 — 2015</div><div><p class="timeline-type">Software engineering</p><h3>Accenture Services · India</h3><p>Built mobile and web banking applications and proposed automated testing algorithms for robust application performance.</p></div></article>
+      </div>
+
+      <div class="education-grid reveal">
+        <article><span>Ph.D.</span><h3>Electrical Engineering</h3><p>Technische Universität Dresden</p><small>Dissertation: electrical transport in 2D van der Waals heterojunctions</small></article>
+        <article><span>M.Sc.</span><h3>Nanoelectronic Systems</h3><p>Technische Universität Dresden</p><small>2015–2018</small></article>
+        <article><span>B.Tech.</span><h3>Electronics & Instrumentation</h3><p>Vellore Institute of Technology</p><small>2010–2014</small></article>
+      </div>
+    </section>
+
+    <section class="section-shell awards-section">
+      <div class="section-heading reveal"><div class="section-kicker"><span>04</span> Recognition</div><h2>Awards</h2></div>
+      <div class="award-list reveal">
+        <article><span>2022</span><h3>HZDR Innovation Contest · 3rd Place</h3><p>2D-material gas sensor development</p></article>
+        <article><span>2018</span><h3>DAAD-STIBET Scholarship</h3><p>For highly committed international students</p></article>
+        <article><span>2017</span><h3>CFAED-INSPIRE Grant</h3><p>Research stay at imec, Leuven</p></article>
+      </div>
+    </section>
+
+    <section id="publications" class="section-shell publications-section">
+      <div class="section-heading pub-heading reveal">
+        <div><div class="section-kicker"><span>05</span> Research</div><h2>Publications</h2></div>
+      </div>
+
+      <div class="publication-toolbar reveal">
+        <div class="filter-group" role="group" aria-label="Filter publications">
+          <button class="filter active" data-filter="all">All</button>
+          <button class="filter" data-filter="journal">Journal</button>
+          <button class="filter" data-filter="conference">Conference</button>
+        </div>
+        <label class="pub-search"><span aria-hidden="true">⌕</span><input id="pubSearch" type="search" placeholder="Search title, venue or year…" autocomplete="off" /></label>
+      </div>
+      <div id="publicationList" class="publication-list" aria-live="polite"></div>
+    </section>
+
+    <section id="contact" class="contact-section section-shell reveal">
+      <div class="contact-card">
+        <p class="eyebrow">Research · Industry · Collaboration</p>
+        <h2>Let's build something together</h2>
+        <a class="button primary large" href="mailto:chavaphanish@gmail.com">chavaphanish@gmail.com <span>↗</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Phanish Chava. Built for the open web.</p>
+    <a href="#top">Back to top ↑</a>
+  </footer>
+</body>
+</html>
