@@ -13,20 +13,6 @@ Built with HTML, CSS, and vanilla JavaScript. No framework, package installation
 - Section navigation, scroll reveal animations, and professional profile links.
 - Search and social metadata, structured data, and crawler configuration.
 
-## Run locally
-
-Clone the repository and serve it with Python 3:
-
-```sh
-git clone https://github.com/chavaphanish/chavaphanish.github.io.git
-cd chavaphanish.github.io
-python3 -m http.server 8000 --bind 127.0.0.1
-```
-
-Open the local server in your browser. Stop it with `Ctrl+C`.
-
-Google Fonts supplies Inter and Space Grotesk; system font fallbacks are available if the fonts cannot load. The site does not require API keys or environment variables.
-
 ## Repository files
 
 | File | Purpose |
